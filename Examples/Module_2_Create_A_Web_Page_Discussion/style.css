@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}    
+    
+html {
+    padding: 3px;
+    width: 100%;
+    height: 100%;
+    background-color: #eeeeee;
+}    
+    
+body {
+    background-color: #ffffff;
+    padding: 25px;
+    width: 100%;
+    height: auto;
+    border-radius: 21px;
+}
+
+li {
+    padding: 5px;
+}
+
+ul {
+    padding: 21px;
+}
+
+ol {
+    padding: 21px;
+}
+
+p {
+    padding: 21px;
+}
+
+.container {
+    max-width: 950px;
+    padding: 21px;
+    background-color: #f3f3f3;
+    width: auto;
+    height: auto;
+    border-radius: 21px;
+    margin-bottom: 21px;
+}
+
+.image_container {
+    max-width: 950px;
+}
+
+.headings {
+    margin: 15px;
+}
+
+.river_financial_bgp_image {
+    width: 750px; 
+    max-width: 100%;
+}
