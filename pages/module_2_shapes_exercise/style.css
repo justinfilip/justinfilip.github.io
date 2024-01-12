@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}    
+    
+html {
+    padding: 3px;
+    width: 100%;
+    height: 100%;
+    /* background-color: #eeeeee; */
+}    
+    
+body {
+    background-color: #ffffff;
+    padding: 25px;
+    width: 100%;
+    height: auto;
+}
+
+/* li {
+    padding: 5px;
+}
+
+ul {
+    padding: 21px;
+}
+
+ol {
+    padding: 21px;
+}
+
+p {
+    padding: 21px;
+}
+
+.container {
+    max-width: 950px;
+    padding: 21px;
+    background-color: #f3f3f3;
+    width: auto;
+    height: auto;
+    border-radius: 21px;
+    margin-bottom: 21px;
+}
+
+.image_container {
+    max-width: 950px;
+}
+
+.headings {
+    margin: 15px;
+}
+
+.river_financial_bgp_image {
+    width: 750px; 
+    max-width: 100%;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.solid-circle {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+/* .border-circle {
+    position: absolute;
+    left: 400px;
+    top: 300px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid black;
+} */
+
+.c1-b1033a {
+    background-color: #b1033a;
+    z-index: 1;
+    opacity: 100%;
+    transition: .3s;
+}
+
+.c2-fbb729 {
+    background-color: #fbb729;
+    z-index: 2;
+    opacity: 100%;
+    transition: .3s;
+}
+
+.c3-ceecf1 {
+    background-color: #ceecf1;
+    z-index: 1;
+    opacity: 100%;
+    transition: .3s;
+}
+
+.c4-898b8f {
+    background-color: #898b8f;
+    z-index: 2;
+    opacity: 100%;
+    transition: .3s;
+}
+
+.c5-b1033a {
+    background-color: #b1033a;
+    z-index: 3;
+    opacity: 100%;
+    transition: .3s;
+}
+
+.c6-ceecf1 {
+    background-color: #ceecf1;
+    z-index: 4;
+    opacity: 100%;
+    transition: .3s;
+}
+
+.c7-fbb729 {
+    background-color: #fbb729;
+    z-index: 1;
+    opacity: 100%;
+    transition: .3s;
+}
+
+.c8-dae349 {
+    background-color: #dae349;
+    z-index: 2;
+    opacity: 100%;
+    transition: .3s;
+}
+
+.hidden {
+    opacity: 0%;
+    transition: .3s;
+    z-index: 1;
+}
