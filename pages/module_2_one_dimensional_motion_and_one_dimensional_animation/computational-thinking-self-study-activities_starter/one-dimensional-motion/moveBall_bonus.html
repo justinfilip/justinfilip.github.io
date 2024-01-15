@@ -1,0 +1,28 @@
+<div id="ball" style="
+  z-index:5;
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:green;
+  transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) .1s"></div>
+
+<script>
+
+var velocityX = 100;
+var velocityY = 100;
+var positionX = 0;
+var positionY = 0;
+var ball = document.getElementById('ball');
+
+// YOUR CODE 
+// ----------------
+setInterval(function() {
+  positionX = positionX + velocityX + positionY;
+  positionY = positionY + velocityY - positionX;
+  ball.style.left = 300 + positionX + 'px';
+  ball.style.top = 500 + positionY + 'px';
+}, 300);
+</script>
