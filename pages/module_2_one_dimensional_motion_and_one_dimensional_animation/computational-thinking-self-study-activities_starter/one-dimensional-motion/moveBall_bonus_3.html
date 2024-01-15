@@ -13,19 +13,19 @@
 
 <script>
 
-function readCookie(name) {
+// function readCookie(name) {
     
-    return (name = new RegExp('(?:^|;\\s*)' + ('' + name).replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&') + '=([^;]*)').exec(document.cookie)) && name[1];
+//     return (name = new RegExp('(?:^|;\\s*)' + ('' + name).replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&') + '=([^;]*)').exec(document.cookie)) && name[1];
 
-}
+// }
 
-function setCookie(name, value, optional_expiry) {
-    document.cookie = name + "=" + value + optional_expiry;
-}
+// function setCookie(name, value, optional_expiry) {
+//     document.cookie = name + "=" + value + optional_expiry;
+// }
 
-function deleteCookie(name) {
-    document.cookie = name + '=; Max-Age=0'
-}
+// function deleteCookie(name) {
+//     document.cookie = name + '=; Max-Age=0'
+// }
 
 var rip_messages = [
   "ALL YOU HAVE TO DO IS CLICK THE NUMBERED CIRCLES",
@@ -36,21 +36,23 @@ var rip_messages = [
   "👍"
 ]
 
-// retain place in message list for continuity and humor
-var rip_message_index = readCookie('rip_message_index');
-if (rip_message_index == null) {
-  setCookie('rip_message_index', 0, "");
-  rip_message_index = 0;
-}
+var rip_message_index = 0;
 
-var high_score = readCookie('high_score');
-if (high_score == null) {
-  setCookie('high_score', 0, "");
-  high_score = 0;
-  document.getElementById("high-score").innerHTML = "High score: " + high_score;
-} else {
-  document.getElementById("high-score").innerHTML = "High score: " + high_score;
-}
+// retain place in message list for continuity and humor
+// var rip_message_index = readCookie('rip_message_index');
+// if (rip_message_index == null) {
+//   setCookie('rip_message_index', 0, "");
+//   rip_message_index = 0;
+// }
+
+// var high_score = readCookie('high_score');
+// if (high_score == null) {
+//   setCookie('high_score', 0, "");
+//   high_score = 0;
+//   document.getElementById("high-score").innerHTML = "High score: " + high_score;
+// } else {
+//   document.getElementById("high-score").innerHTML = "High score: " + high_score;
+// }
 
 function getRandomColor() { // from Anatoliy on Stack Overflow: https://stackoverflow.com/questions/1484506/random-color-generator
   var letters = '0123456789ABCDEF';
@@ -90,10 +92,12 @@ function setTargetBall() {
 
     target_ball.addEventListener("click", (e) => {
 
-      if (high_score < target_count) {
-        setCookie('high_score', target_count);
-        document.getElementById("high-score").innerHTML = "High score: " + target_count;
-      }
+      // if (high_score < target_count) {
+      //   setCookie('high_score', target_count);
+      //   document.getElementById("high-score").innerHTML = "High score: " + target_count;
+      // }
+
+      document.getElementById("high-score").innerHTML = "High score: " + target_count;
 
       target_count++;
       document.getElementById('target_ball').remove();
@@ -146,7 +150,7 @@ for (i=0;i<ball_count;i++) {
       rip_message_index = 0;
     }
 
-    setCookie('rip_message_index', rip_message_index);
+    // setCookie('rip_message_index', rip_message_index);
     ball_container.style.backgroundColor = '#000000';
     
   });
