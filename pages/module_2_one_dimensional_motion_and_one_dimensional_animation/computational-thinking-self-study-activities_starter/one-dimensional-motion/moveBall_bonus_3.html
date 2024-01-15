@@ -47,9 +47,9 @@ var high_score = readCookie('high_score');
 if (high_score == null) {
   setCookie('high_score', 0, "");
   high_score = 0;
-  document.getElementById("high-score").innerHTML = "High score: " + readCookie("high_score");
+  document.getElementById("high-score").innerHTML = "High score: " + high_score;
 } else {
-  document.getElementById("high-score").innerHTML = "High score: " + readCookie("high_score");
+  document.getElementById("high-score").innerHTML = "High score: " + high_score;
 }
 
 function getRandomColor() { // from Anatoliy on Stack Overflow: https://stackoverflow.com/questions/1484506/random-color-generator
@@ -92,6 +92,7 @@ function setTargetBall() {
 
       if (high_score < target_count) {
         setCookie('high_score', target_count);
+        document.getElementById("high-score").innerHTML = "High score: " + target_count;
       }
 
       target_count++;
