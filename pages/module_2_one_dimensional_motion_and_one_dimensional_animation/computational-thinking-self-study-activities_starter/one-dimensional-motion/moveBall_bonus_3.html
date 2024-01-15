@@ -28,12 +28,7 @@
 // }
 
 var rip_messages = [
-  "ALL YOU HAVE TO DO IS CLICK THE NUMBERED CIRCLES",
-  "IT'S EASY COME ON",
-  "SEE? TOLD YA",
-  "...",
-  "YOU SEEM A LITTLE MAD",
-  "👍"
+  "just dodge the color circles and click the numbered circles",
 ]
 
 var rip_message_index = 0;
@@ -98,21 +93,21 @@ function setTargetBall() {
       // }
 
       document.getElementById("high-score").innerHTML = "High score: " + target_count;
-
       target_count++;
       document.getElementById('target_ball').remove();
       setTargetBall();
+
     });
 
     document.getElementById("ball_container").append(target_ball);
 
     setting_target = 0;
+
   }
   
 }
 
 setTargetBall();
-
 
 var ball_count = 21;
 
@@ -143,7 +138,7 @@ for (i=0;i<ball_count;i++) {
     var ball_container = document.getElementById("ball_container");
     clearInterval(dots_process);
 
-    ball_container.innerHTML = "<center><div style='position: fixed; top: 0; left: 0; width: 100%; height: 100%; text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5); font-family: Arial, sans-serif;'><h1 style='color: #ffffff; font-size: 100px; padding-top: 25vh;'>RIP</h1><p style='color: #ffffff'>" + rip_messages[rip_message_index] + "</p><h1 style='width: 300px; height: auto; padding: 15px; border-radius: 15px; background-color: #ffffff; color: #000000' onclick='window.location.reload();'>TRY AGAIN</h1></div></center>";
+    ball_container.innerHTML = "<center><div style='position: fixed; top: 0; left: 0; width: 100%; height: 100%; text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5); font-family: Arial, sans-serif;'><h1 style='color: #ffffff; font-size: 100px; padding-top: 25vh; margin-bottom: 10px;'>RIP</h1><p style='color: #ffffff'>" + rip_messages[rip_message_index] + "</p><h1 style='margin-top: 40px; width: 300px; height: auto; padding: 15px; border-radius: 15px; background-color: #ffffff; color: #000000' onclick='window.location.reload();'>TRY AGAIN</h1></div></center>";
     rip_message_index = rip_message_index + 1;
 
     if (rip_message_index >= rip_messages.length) {
@@ -154,7 +149,6 @@ for (i=0;i<ball_count;i++) {
     ball_container.style.backgroundColor = '#000000';
     
   });
-
 
   document.getElementById("ball_container").append(ball);
 
@@ -225,15 +219,5 @@ var dots_process = setInterval(function() {
     }
   }
 }, 1500);
-
-
-
-
-
-
-
-// YOUR CODE 
-// ----------------
-
 
 </script>
