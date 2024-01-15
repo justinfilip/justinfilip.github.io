@@ -6,8 +6,8 @@
 </head>
 
 <html lang="en" style="margin: 0; padding: 0; width: 100%; height: 100%;">
-  <body style="margin: 0; padding: 0; width: 100%; height: 100%;">
-    <div id="ball_container" style="width: 100%; height: 100%;"></div>
+  <body style="background-color: #ebebeb; margin: 0; padding: 0; width: 100%; height: 100%;">
+    <div id="ball_container" style="width: 100%; height: 100%;"><p id="high-score" style="position: fixed; top: 5px; left: 20px; color: #000000; font-family: Arial, sans-serif;"></p></div>
   </body>
 </html>
 
@@ -47,6 +47,9 @@ var high_score = readCookie('high_score');
 if (high_score == null) {
   setCookie('high_score', 0, "");
   high_score = 0;
+  document.getElementById("high-score").innerHTML = "High score: " + readCookie("high_score");
+} else {
+  document.getElementById("high-score").innerHTML = "High score: " + readCookie("high_score");
 }
 
 function getRandomColor() { // from Anatoliy on Stack Overflow: https://stackoverflow.com/questions/1484506/random-color-generator
@@ -121,7 +124,7 @@ for (i=0;i<ball_count;i++) {
     width:50px;\
     height:50px;\
     border-radius:50%;\
-    transition: .075s;\
+    transition: .75s;\
     background-color: " + background_color + ";\
     top: " + positionY + "px;\
     left: " + positionX + "px;"
@@ -191,28 +194,32 @@ var dots_process = setInterval(function() {
     }
 
     if (directionX === 1) {
-      positionX = positionX + velocity;
+      // positionX = positionX + velocity;
+      positionX = Math.abs(Math.floor(Math.random() * window.innerWidth - 25));
       velocity = Math.max(velocity - velocity_decrement, 0);
       ball.style.left = positionX + 'px';
 
     } else if (directionX === 0) {
-      positionX = positionX - velocity;
+      // positionX = positionX - velocity;
+      positionX = Math.abs(Math.floor(Math.random() * window.innerWidth - 25));
       velocity = Math.max(velocity - velocity_decrement, 0);
       ball.style.left = positionX + 'px';
     }
 
     if (directionY === 1) {
-      positionY = positionY + velocity;
+      // positionY = positionY + velocity;
+      positionY = Math.abs(Math.floor(Math.random() * window.innerHeight - 25));
       velocity = Math.max(velocity - velocity_decrement, 0);
       ball.style.top = positionY + 'px';
 
     } else if (directionY === 0) {
-      positionY = positionY - velocity;
+      // positionY = positionY - velocity;
+      positionY = Math.abs(Math.floor(Math.random() * window.innerHeight - 25));
       velocity = Math.max(velocity - velocity_decrement, 0);
       ball.style.top = positionY + 'px';
     }
   }
-}, 60);
+}, 1500);
 
 
 
