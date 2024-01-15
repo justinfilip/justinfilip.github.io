@@ -18,8 +18,22 @@ var ball = document.getElementById('ball');
 // ----------------
 
 setInterval(function() {
-  position = position + velocity;
-  ball.style.left = position + 'px';
-}, 15);
+
+  if (parseInt(ball.style.left.split("px")[0]) <= 0) {
+    direction = 1;
+
+  } else if (parseInt(ball.style.left.split("px")[0]) + parseInt(ball.style.width.split("px")[0]) >= window.innerWidth) {
+    direction = 0;
+  }
+
+  if (direction === 1) {
+    position = position + velocity;
+    ball.style.left = position + 'px';
+
+  } else if (direction === 0) {
+    position = position - velocity;
+    ball.style.left = position + 'px';
+  }
+}, 5);
 
 </script>

@@ -7,22 +7,56 @@
   height:50px;
   border-radius:50%;
   background:green;
-  transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) .1s"></div>
+  transition: .05s"></div>
 
 <script>
 
-var velocityX = 100;
-var velocityY = 100;
 var positionX = 0;
 var positionY = 0;
 var ball = document.getElementById('ball');
 
 // YOUR CODE 
 // ----------------
+
+var velocity = 35;
+const velocity_decrement = .02;
+
 setInterval(function() {
-  positionX = positionX + velocityX + positionY;
-  positionY = positionY + velocityY - positionX;
-  ball.style.left = 300 + positionX + 'px';
-  ball.style.top = 500 + positionY + 'px';
-}, 300);
+
+  if (parseInt(ball.style.left.split("px")[0]) <= 0) {
+    directionX = 1;
+
+  } else if (parseInt(ball.style.left.split("px")[0]) + parseInt(ball.style.width.split("px")[0]) >= window.innerWidth) {
+    directionX = 0;
+  }
+
+  if (parseInt(ball.style.top.split("px")[0]) <= 0) {
+    directionY = 1;
+
+  } else if (parseInt(ball.style.top.split("px")[0]) + parseInt(ball.style.width.split("px")[0]) >= window.innerHeight) {
+    directionY = 0;
+  }
+
+  if (directionX === 1) {
+    positionX = positionX + velocity;
+    velocity = Math.max(velocity -velocity_decrement, 0);
+    ball.style.left = positionX + 'px';
+
+  } else if (directionX === 0) {
+    positionX = positionX - velocity;
+    velocity = Math.max(velocity -velocity_decrement, 0);
+    ball.style.left = positionX + 'px';
+  }
+
+  if (directionY === 1) {
+    positionY = positionY + velocity;
+    velocity = Math.max(velocity -velocity_decrement, 0);
+    ball.style.top = positionY + 'px';
+
+  } else if (directionY === 0) {
+    positionY = positionY - velocity;
+    velocity = Math.max(velocity -velocity_decrement, 0);
+    ball.style.top = positionY + 'px';
+  }
+}, 10);
 </script>
