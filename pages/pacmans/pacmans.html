@@ -3,7 +3,7 @@
 <body>
     <div id='game'>
         <button onclick='makeOne()' width='200' height='30'>Add PacMan</button>
-        <button onclick='update()' width='200' height='30'>Start Game</button>
+        <button id='gameButton' onclick='update()' width='200' height='30'>Start Game</button>
 
     </div>
 </body>
@@ -61,6 +61,12 @@
     }
 
     function update() {
+        
+        if (document.getElementById('gameButton').innerText = "Start Game") {
+            document.getElementById('gameButton').innerText = "Faster";
+        }
+
+
         //loop over pacmen array and move each one and move image in DOM
         pacMen.forEach((item) => {
             checkCollisions(item)
