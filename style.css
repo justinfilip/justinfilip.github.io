@@ -50,6 +50,7 @@ h3 {
 
 .profile-image {
     width: 300px;
+    max-width: 80%;
     margin: 35px;
 }
 
@@ -61,8 +62,4 @@ h3 {
     height: 80px;
     vertical-align: top;
     margin: 35px;
-}
-
-.executiveSummary {
-    max-width: 1000px;
 }
