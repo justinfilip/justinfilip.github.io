@@ -63,3 +63,14 @@ h3 {
     vertical-align: top;
     margin: 35px;
 }
+
+.navbar-alt {
+    background-color: #ffffff;
+}
+
+.nav-button {
+    display: inline-block;
+    height: 5vh;
+    width: 50px;
+    border: 1px solid #ff0000;
+}
