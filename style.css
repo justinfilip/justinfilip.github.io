@@ -14,3 +14,7 @@ html {
     width: 300px;
     margin: 69px;
 }
+
+.executiveSummary {
+    max-width: 1000px;
+}
