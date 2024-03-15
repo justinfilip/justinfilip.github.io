@@ -27,6 +27,18 @@ h3 {
     margin: 69px;
 }
 
+.name {
+    display: inline-block;
+}
+
+.blockie {
+    height: 69px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
 .executiveSummary {
     max-width: 1000px;
 }
