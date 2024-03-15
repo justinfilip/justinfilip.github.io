@@ -1,18 +1,19 @@
 async function disableActivePages() {
     // reset any currently selected nav buttons
     var activeNavButtons = document.getElementsByClassName("button-selected");
+
     for (let i = 0; i < activeNavButtons.length; i++) {
         activeNavButtons[i].className = "nav-button";
     }
 
-    // let disablePage = await disableActivePages();
+    // reset any current active details pages
     var activePages = document.getElementsByClassName("details-active");
-    console.log(activePages)
+
     for (let j = 0; j < activePages.length; j++) {
         activePages[j].className = "details-inactive";
     }
 
-    return "";
+    return null;
 }
 
 addEventListener("load", (e) => {
