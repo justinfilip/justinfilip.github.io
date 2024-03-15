@@ -22,14 +22,36 @@ h3 {
     padding-bottom: 14px;
 }
 
+.grid {
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: 
+        "..... profile ....."
+        "details details";
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.profile {
+    border: 1px solid #ff0000;
+}
+
+.details {
+    padding: 25px;
+    max-width: 500px;
+    vertical-align: top;
+    border: 1px solid #ff0000;
+}
+
 .profile-image {
     width: 300px;
-    margin: 69px;
+    margin: 50px;
     margin-bottom: 33px;
 }
 
 .name {
-    display: inline-block;
     font-size: 40px;
 }
 
