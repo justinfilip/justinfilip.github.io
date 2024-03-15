@@ -27,28 +27,26 @@ h3 {
     grid-gap: 0px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    grid-template-areas: 
-        "..... profile ....."
-        "details details";
     display: flex;
     flex-wrap: wrap;
 }
 
 .profile {
+    width: 500px;
     border: 1px solid #ff0000;
+    margin: 25px;
 }
 
 .details {
-    padding: 25px;
-    max-width: 500px;
+    margin: 25px;
+    width: 500px;
     vertical-align: top;
     border: 1px solid #ff0000;
 }
 
 .profile-image {
     width: 300px;
-    margin: 50px;
-    margin-bottom: 33px;
+    margin: 35px;
 }
 
 .name {
@@ -58,7 +56,7 @@ h3 {
 .blockie {
     height: 80px;
     vertical-align: top;
-    margin-top: 25px;
+    margin: 35px;
 }
 
 .executiveSummary {
