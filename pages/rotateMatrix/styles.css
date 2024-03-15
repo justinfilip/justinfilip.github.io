@@ -1,0 +1,27 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
+    grid-gap: 10px;
+    transform: rotate(90deg);
+    max-width: 250px;
+    max-height: 250px;
+    margin-top: 50px;
+}
+
+.rowContaier {
+    height: auto;
+}
+
+.box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    transform: rotate(-90deg);
+}
