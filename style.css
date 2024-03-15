@@ -10,6 +10,10 @@ html {
     scrollbar-width: none;   
 }
 
+body {
+    padding: 10px;
+}
+
 .profile-image {
     width: 300px;
     margin: 69px;
