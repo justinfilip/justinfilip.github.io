@@ -18,6 +18,10 @@ u {
     color: #0963fd;
 }
 
+h3 {
+    padding-bottom: 14px;
+}
+
 .profile-image {
     width: 300px;
     margin: 69px;
