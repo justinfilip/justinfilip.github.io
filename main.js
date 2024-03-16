@@ -41,16 +41,4 @@ addEventListener("load", (e) => {
 
         document.getElementById("projects").className = "details-active";
     });
-
-    // Social button
-    document.getElementById("socialButton").addEventListener('pointerdown', async (e) => {
-
-        // reset any active pages and nav buttons
-        let disablePage = await disableActivePages();
-
-        // set the clicked nav button to the selected theme
-        e.target.className = "button-selected";
-
-        document.getElementById("social").className = "details-active";
-    });
 });
