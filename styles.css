@@ -15,16 +15,8 @@ body {
     padding-bottom: 100px;
 }
 
-u {
-    color: #0963fd;
-}
-
 h3 {
     padding-bottom: 14px;
-}
-
-a {
-    color: #af6c6c;
 }
 
 .usa {
@@ -84,6 +76,7 @@ a {
 .profile-link {
     display: inline-block;
     color: #af6c6c;
+    text-decoration: none;
 }
 
 .name {
