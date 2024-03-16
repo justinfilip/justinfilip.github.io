@@ -19,7 +19,7 @@ async function disableActivePages() {
 addEventListener("load", (e) => {
 
     // Home button
-    document.getElementById("homeButton").addEventListener('click', async (e) => {
+    document.getElementById("homeButton").addEventListener('pointerdown', async (e) => {
 
         // reset any active pages and nav buttons
         let disablePage = await disableActivePages();
@@ -31,7 +31,7 @@ addEventListener("load", (e) => {
     });
 
     // Projects button
-    document.getElementById("projectsButton").addEventListener('click', async (e) => {
+    document.getElementById("projectsButton").addEventListener('pointerdown', async (e) => {
 
         // reset any active pages and nav buttons
         let disablePage = await disableActivePages();
@@ -40,5 +40,17 @@ addEventListener("load", (e) => {
         e.target.className = "button-selected";
 
         document.getElementById("projects").className = "details-active";
+    });
+
+    // Social button
+    document.getElementById("socialButton").addEventListener('pointerdown', async (e) => {
+
+        // reset any active pages and nav buttons
+        let disablePage = await disableActivePages();
+
+        // set the clicked nav button to the selected theme
+        e.target.className = "button-selected";
+
+        document.getElementById("social").className = "details-active";
     });
 });

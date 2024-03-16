@@ -75,6 +75,15 @@ h3 {
     margin: 35px;
 }
 
+.profile-links-container {
+    margin-top: 10px;
+    margin-left: -5px;
+}
+
+.profile-link {
+    display: inline-block;
+}
+
 .name {
     font-size: 40px;
 }
