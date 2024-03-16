@@ -2,4 +2,4 @@
 
 ### Justin Filip's GitHub Portfolio
 
-This directory contains a quick, slightly frustrating game. Click the numbered circles!
+This directory contains a quick, slightly frustrating game. Meant to be played with a mouse. Click the numbered circles!
